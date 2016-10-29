@@ -9,8 +9,8 @@ users = []
 end
 
 20.times do 
-	snippet = Snippet.new(title: Faker::Lorem.sentence,
-		body: Faker::Lorem.paragraphs(1),
+	snippet = Snippet.new(body: Faker::Lorem.paragraphs(1),
+		author_name: Faker::Name.name,
 		user_id: rand(1..15) )
 	snippet.save
 end

@@ -1,1 +1,8 @@
-<h1> Show all snippets </h1>
+<% if user_signed_in? %>
+<li class="navbar-text"> Hello, <%= current_user.first_name %> </li>
+<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+<% else %>
+	<%= link_to "Register", new_user_registration_path %><br>
+	<%= link_to "Login", new_user_session_path %>
+<% end %>
+<h1> Show all snippets on this landing page  </h1>
