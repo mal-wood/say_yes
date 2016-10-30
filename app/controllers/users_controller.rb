@@ -1,6 +1,7 @@
 class UsersController < ActionController::Base
 
 	def index 
+		@snippets = Snippet.all
 	end 
 
 	def delete
