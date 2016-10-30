@@ -2,7 +2,7 @@ class SnippetsController < ActionController::Base
 
 	def index 
 		@user = User.find(current_user.id)
-		@snippets = Snippet.all
+		@snippets = @user.snippets
 	end 
 
 	def new
