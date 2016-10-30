@@ -3,6 +3,7 @@
 		<%= button_to "New snippet", new_user_snippet_path(current_user.id), :method => :get %>
 		<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
 		<%= link_to "Me", user_snippets_path(current_user.id) %>
+		<%= link_to "Friends", user_friendships_path(current_user.id) %>
 <% else %>
 	<%= link_to "Register", new_user_registration_path %><br>
 		<%= link_to "Login", new_user_session_path %>
@@ -12,5 +13,6 @@
 		<%= snippet.body %>
 		<%= snippet.author_name %><br>
 		<p> Posted by: <%= snippet.user.first_name%> </p>
+		<p><%= link_to "Add Friend", %></p>
 		<br><br>
 		<% end %>
