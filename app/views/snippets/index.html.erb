@@ -1,1 +1,5 @@
-<h1> Show all snippets </h1>
+<h2>My inspiration:</h2>
+<h1> <% @snippets.each do |snippet| %></h1>
+<h3><%= snippet.body %></h3>
+<%= snippet.author_name %><br><br>
+<% end %>
