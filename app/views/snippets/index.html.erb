@@ -1,8 +1,5 @@
-<% if user_signed_in? %>
-<li class="jumbotron"> Hello, <%= current_user.first_name %> </li>
-<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-<% else %>
-	<%= link_to "Register", new_user_registration_path %><br>
-	<%= link_to "Login", new_user_session_path %>
+<h2>Here are my snippets</h2>
+<h1> <% @snippets.each do |snippet| %></h1>
+<%= snippet.body %>
+<%= snippet.author_name %>
 <% end %>
-<h1> Show all snippets on this landing page  </h1>
